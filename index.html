@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        html, body {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #canvas-container {
+            width: 75%;
+            height: 100%;
+        }
+
+        #canvas {
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+
+        .inputs {
+            width: 25%;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+    <div class="inputs">
+        <p>
+            <label>Amount of meshes:</label>
+            <br>
+            <input id="amount" type="number" value="10" >
+            <br>
+            <label>Sphere segments:</label>
+            <br>
+            <input id="segments" type="number" value="1">
+        </p>
+
+
+        <p>
+            FPS: <span id="fps-counter"></span>
+            <br>
+            <input type="submit" onclick="updateScene()">
+        </p>
+    </div>
+</div>
+
+<script src="https://cdn.babylonjs.com/babylon.js" type="text/javascript" defer></script>
+<script src="app.js"></script>
+</body>
+</html>
